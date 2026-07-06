@@ -2151,3 +2151,287 @@ html[data-board-bg="night"] .daily-wall-sticker span {
   }
 }
 
+
+/* User requested mobile fit and capture page cleanup */
+.home-screen,
+.capture-screen {
+  min-height: calc(100dvh - 112px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-screen[hidden],
+.capture-screen[hidden] {
+  display: none !important;
+}
+
+.day-header {
+  margin-bottom: 10px;
+}
+
+.day-header p {
+  display: none;
+}
+
+.today-summary {
+  display: none !important;
+}
+
+.widget-board {
+  flex: 1 1 auto;
+  min-height: 0 !important;
+  height: clamp(430px, calc(100dvh - 188px), 650px);
+  border-radius: 32px;
+}
+
+.board-bg::after,
+.sticker-kcal,
+.sticker-name,
+.sticker-time {
+  display: none !important;
+}
+
+.sticker-layer {
+  inset: 28px 12px 18px !important;
+}
+
+.food-sticker {
+  width: 118px;
+  min-height: 118px;
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.sticker-image-wrap {
+  width: 112px;
+  height: 112px;
+}
+
+.capture-screen {
+  padding-bottom: 0;
+}
+
+.capture-screen #recordForm {
+  min-height: calc(100dvh - 112px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  gap: 10px;
+}
+
+.capture-screen .dialog-header {
+  margin-bottom: 0;
+}
+
+.capture-screen .dialog-header p {
+  display: none;
+}
+
+.capture-screen .merged-stage {
+  min-height: 0;
+  height: 100%;
+  max-height: 44dvh;
+  border-radius: 24px;
+}
+
+.capture-screen .compact-form-grid {
+  margin-top: 0;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.capture-screen label {
+  gap: 4px;
+  font-size: 13px;
+}
+
+.capture-screen input {
+  min-height: 40px;
+  padding: 8px 10px;
+  border-radius: 12px;
+}
+
+.capture-screen .capture-bottom-bar {
+  position: static;
+  min-height: 58px;
+  margin: 0;
+  padding: 8px;
+  border-radius: 22px;
+  flex-wrap: nowrap;
+}
+
+.capture-screen .capture-bottom-bar button,
+.capture-screen .capture-bottom-bar .file-button {
+  min-height: 42px;
+  padding: 0 10px;
+  flex: 1 1 0;
+  white-space: nowrap;
+}
+
+.activity-date-strip {
+  grid-template-columns: repeat(7, minmax(48px, 1fr)) !important;
+  gap: 7px !important;
+  margin: 4px 0 10px !important;
+  padding: 2px 1px 6px !important;
+}
+
+.activity-date-pill {
+  min-height: 62px !important;
+  gap: 3px !important;
+  padding: 7px 5px !important;
+  border-width: 1px !important;
+  box-shadow: 0 8px 18px rgba(70,52,35,.07) !important;
+}
+
+.activity-date-pill i {
+  min-height: 10px !important;
+  font-size: 12px !important;
+}
+
+.activity-date-pill span {
+  font-size: 12px !important;
+}
+
+.activity-date-pill strong {
+  font-size: 20px !important;
+}
+
+.daily-wall-sticker {
+  width: 118px !important;
+  padding: 0 !important;
+}
+
+.daily-wall-sticker img {
+  width: 112px !important;
+  height: 112px !important;
+}
+
+.daily-wall-sticker strong,
+.daily-wall-sticker span {
+  display: none !important;
+}
+
+@media (max-width: 680px) {
+  body {
+    overflow: hidden;
+  }
+
+  .phone-shell {
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow: hidden;
+    padding: 10px 8px calc(82px + env(safe-area-inset-bottom));
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .plain-button {
+    width: 34px;
+    min-height: 34px;
+    font-size: 22px;
+  }
+
+  .date-line strong {
+    font-size: 32px;
+  }
+
+  .widget-board {
+    height: calc(100dvh - 148px);
+    border-radius: 26px;
+    padding: 10px;
+  }
+
+  .food-sticker {
+    width: 92px;
+    min-height: 92px;
+  }
+
+  .sticker-image-wrap {
+    width: 88px;
+    height: 88px;
+  }
+
+  .bottom-nav {
+    bottom: max(8px, env(safe-area-inset-bottom));
+    min-height: 62px;
+    padding: 8px;
+  }
+
+  .bottom-nav button {
+    min-height: 44px;
+    padding: 0 8px;
+  }
+
+  .capture-screen #recordForm {
+    min-height: calc(100dvh - 92px);
+    gap: 8px;
+  }
+
+  .capture-screen .merged-stage {
+    max-height: 34dvh;
+    border-radius: 20px;
+  }
+
+  .capture-screen .compact-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .capture-screen label {
+    font-size: 12px;
+  }
+
+  .capture-screen input {
+    min-height: 36px;
+    padding: 7px 9px;
+  }
+
+  .capture-screen .capture-bottom-bar {
+    min-height: 52px;
+    gap: 5px;
+    border-radius: 18px;
+  }
+
+  .capture-screen .capture-bottom-bar button,
+  .capture-screen .capture-bottom-bar .file-button {
+    min-height: 38px;
+    padding: 0 6px;
+    font-size: 12px;
+  }
+
+  .activity-date-strip {
+    grid-template-columns: repeat(7, 46px) !important;
+    gap: 6px !important;
+  }
+
+  .activity-date-pill {
+    min-height: 58px !important;
+    padding: 6px 4px !important;
+  }
+}
+
+/* Keep timeline usable while home/capture stay one-screen */
+.timeline-screen {
+  max-height: calc(100dvh - 96px);
+  overflow-y: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+
+.timeline-screen::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .timeline-screen {
+    max-height: calc(100dvh - 82px);
+    overflow-y: auto;
+  }
+}
